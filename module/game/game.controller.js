@@ -7,7 +7,10 @@ const gameController = {};
 gameController.findGame = async (req, res) => {
 	try {
 		console.log(req.params.gameId);
-		const game = await gameModel.findById(req.params.gameId).populate();
+		const game = await gameModel
+			.findOne({ _id: req.params.gameId })
+			.populate({ path: 'quizIds', model: 'quiz' })
+			.exec();
 		if (!game) {
 			return res
 				.status(StatusCodes.BAD_REQUEST)
@@ -21,7 +24,7 @@ gameController.findGame = async (req, res) => {
 	}
 };
 
-gameController.reviseGame = async (req, res) => {};
+gameController.updateGame = async (req, res) => {};
 
 gameController.deleteGame = async (req, res) => {
 	try {
