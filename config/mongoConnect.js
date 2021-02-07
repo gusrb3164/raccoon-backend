@@ -1,3 +1,4 @@
+
 import mongoose from 'mongoose';
 import debug from 'debug';
 import appConfig from './env';
@@ -39,6 +40,7 @@ const connectMongo = async () => {
 		useCreateIndex: true,
 		useUnifiedTopology: true,
 	});
+
 };
 
 export default connectMongo;

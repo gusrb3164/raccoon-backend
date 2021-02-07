@@ -20,5 +20,6 @@
 				"arrowParens": "always"
 			}
 		]
+		"prettier/prettier": "error"
 	}
 }
