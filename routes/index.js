@@ -1,5 +1,6 @@
 import express from "express";
 import apiRoutes from "./api";
+import { gameRoutes } from "../module/games/game.routes";
 
 const mainRouter = express.Router();
 
