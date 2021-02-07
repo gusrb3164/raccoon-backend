@@ -8,6 +8,5 @@ mainRouter.all('/', (req, res, next) => {
 	res.redirect('/api-docs');
 });
 mainRouter.use('/api', apiRoutes);
-mainRouter.use('/game', gameRoutes);
 
 export default mainRouter;

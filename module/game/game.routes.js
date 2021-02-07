@@ -8,4 +8,4 @@ gameRoutes.get('/:gameId', asyncWrapper(gameController.findGame));
 gameRoutes.put('/:gameId', asyncWrapper(gameController.updateGame));
 gameRoutes.delete('/:gameId', asyncWrapper(gameController.deleteGame));
 
-export default gameRoutes;
+export { gameRoutes };
